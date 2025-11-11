@@ -7,7 +7,6 @@ logs/
 .env
 .env.local
 dist/
-frontend/dist/
 backend/node_modules/
 
 # Vite
