@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/cs_web/',
   plugins: [vue()],
   server: {
     proxy: {
