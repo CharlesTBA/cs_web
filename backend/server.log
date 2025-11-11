@@ -1,0 +1,198 @@
+✅ Server running on http://localhost:3000
+POST /api/staff/admin/login { password: 'admin123', username: 'admin' }
+Received login request: { password: 'admin123', username: 'admin' }
+Admins data loaded: {
+  admins: [
+    {
+      id: 'admin1',
+      username: 'admin',
+      password: 'admin123',
+      role: 'super_admin',
+      name: 'System Administrator'
+    }
+  ]
+}
+Admin found: {
+  id: 'admin1',
+  username: 'admin',
+  password: 'admin123',
+  role: 'super_admin',
+  name: 'System Administrator'
+}
+Sending response: {
+  id: 'admin1',
+  name: 'System Administrator',
+  role: 'super_admin',
+  type: 'admin'
+}
+GET / undefined
+POST /api/staff/admin/login { username: 'admin', password: 'admin123' }
+Received login request: { username: 'admin', password: 'admin123' }
+Admins data loaded: {
+  admins: [
+    {
+      id: 'admin1',
+      username: 'admin',
+      password: 'admin123',
+      role: 'super_admin',
+      name: 'System Administrator'
+    }
+  ]
+}
+Admin found: {
+  id: 'admin1',
+  username: 'admin',
+  password: 'admin123',
+  role: 'super_admin',
+  name: 'System Administrator'
+}
+Sending response: {
+  id: 'admin1',
+  name: 'System Administrator',
+  role: 'super_admin',
+  type: 'admin'
+}
+GET /admin/ undefined
+GET / undefined
+POST /api/staff/admin/login { username: 'admin', password: 'admin123' }
+Received login request: { username: 'admin', password: 'admin123' }
+Admins data loaded: {
+  admins: [
+    {
+      id: 'admin1',
+      username: 'admin',
+      password: 'admin123',
+      role: 'super_admin',
+      name: 'System Administrator'
+    }
+  ]
+}
+Admin found: {
+  id: 'admin1',
+  username: 'admin',
+  password: 'admin123',
+  role: 'super_admin',
+  name: 'System Administrator'
+}
+Sending response: {
+  id: 'admin1',
+  name: 'System Administrator',
+  role: 'super_admin',
+  type: 'admin'
+}
+GET /admin/ undefined
+GET /admin/users/students undefined
+GET /admin/users/users/students undefined
+GET /admin/users/users/users/professors undefined
+GET /admin/users/users/users/courses undefined
+GET /admin/users/users/users/courses/assign undefined
+GET /admin/users/users/users/courses/courses undefined
+GET /admin/users/users/users/courses/courses/assign undefined
+GET /admin/users/users/users/courses/courses/courses undefined
+GET /admin/users/users/users/courses/courses/courses/assign undefined
+GET /admin/users/users/users/courses/courses/courses/users/students undefined
+GET /admin/users/users/users/courses/courses/courses/users/users/professors undefined
+GET /admin/users/users/users/courses/courses/courses/users/users/users/students undefined
+GET /admin/users/users/users/courses/courses/courses/users/users/users/users/professors undefined
+GET /admin/users/users/users/courses/courses/courses/users/users/users/users/users/students undefined
+GET /admin/users/users/users/courses/courses/courses/users/users/users/users/users/users/professors undefined
+GET / undefined
+POST /api/staff/professor/login { username: 'prof', password: 'prof123' }
+GET /admin/ undefined
+GET / undefined
+POST /api/staff/admin/login { username: 'admin', password: 'admin123' }
+Received login request: { username: 'admin', password: 'admin123' }
+Admins data loaded: {
+  admins: [
+    {
+      id: 'admin1',
+      username: 'admin',
+      password: 'admin123',
+      role: 'super_admin',
+      name: 'System Administrator'
+    }
+  ]
+}
+Admin found: {
+  id: 'admin1',
+  username: 'admin',
+  password: 'admin123',
+  role: 'super_admin',
+  name: 'System Administrator'
+}
+Sending response: {
+  id: 'admin1',
+  name: 'System Administrator',
+  role: 'super_admin',
+  type: 'admin'
+}
+GET /admin/ undefined
+GET /professor/ undefined
+GET /professor-login undefined
+GET /api/courses undefined
+GET /professor/ undefined
+GET /professor-login undefined
+GET /api/courses undefined
+GET /professor/ undefined
+GET /professor-login undefined
+GET /api/courses undefined
+GET /professor-login undefined
+GET / undefined
+POST /api/staff/professor/login { username: 'prof', password: 'prof123' }
+GET /admin/ undefined
+GET / undefined
+POST /api/staff/admin/login { username: 'admin', password: 'admin123' }
+Received login request: { username: 'admin', password: 'admin123' }
+Admins data loaded: {
+  admins: [
+    {
+      id: 'admin1',
+      username: 'admin',
+      password: 'admin123',
+      role: 'super_admin',
+      name: 'System Administrator'
+    }
+  ]
+}
+Admin found: {
+  id: 'admin1',
+  username: 'admin',
+  password: 'admin123',
+  role: 'super_admin',
+  name: 'System Administrator'
+}
+Sending response: {
+  id: 'admin1',
+  name: 'System Administrator',
+  role: 'super_admin',
+  type: 'admin'
+}
+GET /admin/ undefined
+GET / undefined
+POST /api/staff/professor/login { username: 'prof', password: 'prof123' }
+GET /admin/ undefined
+GET / undefined
+POST /api/staff/professor/login { username: 'prof', password: 'prof123' }
+POST /api/staff/professor/login { password: 'prof123', username: 'prof' }
+GET / undefined
+POST /api/staff/professor/login { username: 'prof', password: 'prof123' }
+GET /professor/ undefined
+GET /professor-login undefined
+GET /api/courses undefined
+GET /api/courses undefined
+GET /api/announcements/recent undefined
+GET /api/grades undefined
+GET /api/courses undefined
+GET /api/announcements/recent undefined
+GET /api/grades undefined
+GET /professor-login undefined
+GET / undefined
+GET / undefined
+GET / undefined
+POST /api/staff/professor/login { password: 'prof123', username: 'prof' }
+GET / undefined
+GET / undefined
+GET /professor/ undefined
+GET /professor-login undefined
+GET /api/courses undefined
+GET / undefined

@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "title": "School Achieves Excellence Award",
+      "content": "We are proud to announce that our school has been awarded the National Excellence in Education Award for the third consecutive year. This recognition reflects our commitment to providing outstanding education and fostering student success.",
+      "date": "2025-11-07T10:00:00Z",
+      "category": "Achievements",
+      "author": "Principal Johnson",
+      "image": "https://example.com/award-ceremony.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Annual Science Fair Announcement",
+      "content": "Mark your calendars for our upcoming Annual Science Fair! Students will showcase their innovative projects and compete for prestigious awards. Join us for an exciting day of scientific discovery and creativity.",
+      "date": "2025-11-06T09:00:00Z",
+      "category": "Events",
+      "author": "Science Department",
+      "image": "https://example.com/science-fair.jpg"
+    }
+  ]
+}

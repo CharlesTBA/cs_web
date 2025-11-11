@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Professor Login</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;background:#f7fafc;display:flex;align-items:center;justify-content:center;height:100vh}
+    .box{background:white;padding:24px;border-radius:8px;box-shadow:0 6px 18px rgba(10,31,68,0.08);width:360px}
+    input{width:100%;padding:10px;margin-bottom:12px;border:1px solid #e5e7eb;border-radius:6px}
+    button{background:#2563eb;color:white;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
+    .error{color:#dc2626;margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2 style="margin-top:0">Professor Login</h2>
+    <p style="color:#4b5563;font-size:14px">Use your staff username and password</p>
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+    <div id="msg" class="error"></div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const msg = document.getElementById('msg');
+      msg.textContent = '';
+      if(!user || !pass){ msg.textContent = 'Username and password required'; return }
+      try{
+        const res = await fetch('/api/staff/professor/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: user, password: pass })
+        });
+        if(!res.ok){
+          const body = await res.json().catch(()=>({error:'Login failed'}));
+          msg.textContent = body.error || 'Invalid credentials';
+          return;
+        }
+        const data = await res.json();
+  // store minimal professor info and redirect to admin panel for CRUD
+  localStorage.setItem('professor', JSON.stringify(data));
+  window.location.href = '/admin';
+      }catch(e){
+        console.error(e); msg.textContent = 'Network error';
+      }
+    });
+  </script>
+</body>
+</html>

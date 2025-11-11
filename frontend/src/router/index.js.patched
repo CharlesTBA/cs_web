@@ -1,0 +1,70 @@
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import News from '../views/News.vue'
+import Events from '../views/Events.vue'
+import Faculty from '../views/Faculty.vue'
+import Academics from '../views/Academics.vue'
+import Admissions from '../views/Admissions.vue'
+import Contact from '../views/Contact.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import AdminLogin from '../views/AdminLogin.vue'
+import AdminDashboard from '../views/AdminDashboard.vue'
+import ProfessorLogin from '../views/ProfessorLogin.vue'
+import ProfessorDashboard from '../views/ProfessorDashboard.vue'
+
+const routes = [
+  { path: '/', name: 'Home', component: Home },
+  { path: '/about', name: 'About', component: About },
+  { path: '/news', name: 'News', component: News },
+  { path: '/events', name: 'Events', component: Events },
+  { path: '/faculty', name: 'Faculty', component: Faculty },
+  { path: '/academics', name: 'Academics', component: Academics },
+  { path: '/admissions', name: 'Admissions', component: Admissions },
+  { path: '/contact', name: 'Contact', component: Contact },
+  // Student login
+  { path: '/login', name: 'Login', component: Login },
+  { path: '/register', name: 'Register', component: Register },
+  // Admin login & dashboard
+  { path: '/admin-login', name: 'AdminLogin', component: AdminLogin },
+  { path: '/admin', name: 'AdminDashboard', component: AdminDashboard, meta: { requiresAuth: true, role: 'admin' } },
+  // Professor login & dashboard
+  { path: '/professor-login', name: 'ProfessorLogin', component: ProfessorLogin },
+  { path: '/professor', name: 'ProfessorDashboard', component: ProfessorDashboard, meta: { requiresAuth: true, role: 'professor' } }
+]
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes
+})
+
+router.beforeEach((to, from, next) => {
+  // Role-aware auth guard. Routes that set meta.requiresAuth require an authenticated
+  // user of the indicated role. We check localStorage keys used by the login views.
+  if (!to.meta || !to.meta.requiresAuth) {
+    return next()
+  }
+
+  const role = to.meta.role || 'student'
+  let authenticated = false
+  if (role === 'admin') {
+    authenticated = !!localStorage.getItem('admin')
+  } else if (role === 'professor') {
+    authenticated = !!localStorage.getItem('professor')
+  } else {
+    authenticated = !!localStorage.getItem('studentId')
+  }
+
+  if (!authenticated) {
+    // Redirect to the appropriate login page
+    if (role === 'admin') return next({ name: 'AdminLogin' })
+    if (role === 'professor') return next({ name: 'ProfessorLogin' })
+    return next({ name: 'Login' })
+  }
+
+  next()
+})
+
+export default router

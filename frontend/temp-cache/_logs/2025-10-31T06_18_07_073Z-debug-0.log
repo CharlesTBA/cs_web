@@ -1,0 +1,533 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ACER\student-portal\frontend\.npmrc
+5 silly config load:file:C:\Users\ACER\.npmrc
+6 silly config load:file:C:\Users\ACER\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @vitejs/plugin-vue
+8 verbose argv "install" "--save-dev" "@vitejs/plugin-vue" "--cache" "./temp-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\ACER\student-portal\frontend\temp-cache\_logs\2025-10-31T06_18_07_073Z-
+10 verbose logfile C:\Users\ACER\student-portal\frontend\temp-cache\_logs\2025-10-31T06_18_07_073Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest @vitejs/plugin-vue@*
+15 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-vue cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/npm 1267ms
+18 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-vue 1102ms (cache miss)
+19 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-vue set size:undefined disposed:false
+20 silly fetch manifest vite@^5.0.9
+21 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+22 http fetch GET 200 https://registry.npmjs.org/vite 1680ms (cache miss)
+23 silly packumentCache full:https://registry.npmjs.org/vite set size:undefined disposed:false
+24 silly fetch manifest @types/node@^18.0.0 || >=20.0.0
+25 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 2063ms (cache miss)
+27 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:undefined disposed:false
+28 silly fetch manifest less@*
+29 silly packumentCache full:https://registry.npmjs.org/less cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/less 82ms (cache miss)
+31 silly packumentCache full:https://registry.npmjs.org/less set size:undefined disposed:false
+32 silly fetch manifest lightningcss@^1.21.0
+33 silly packumentCache full:https://registry.npmjs.org/lightningcss cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/lightningcss 257ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/lightningcss set size:undefined disposed:false
+36 silly fetch manifest sass@*
+37 silly packumentCache full:https://registry.npmjs.org/sass cache-miss
+38 http fetch GET 200 https://registry.npmjs.org/sass 88ms (cache miss)
+39 silly packumentCache full:https://registry.npmjs.org/sass set size:undefined disposed:false
+40 silly fetch manifest sass-embedded@*
+41 silly packumentCache full:https://registry.npmjs.org/sass-embedded cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/sass-embedded 347ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/sass-embedded set size:undefined disposed:false
+44 silly fetch manifest stylus@*
+45 silly packumentCache full:https://registry.npmjs.org/stylus cache-miss
+46 http fetch GET 200 https://registry.npmjs.org/stylus 113ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/stylus set size:undefined disposed:false
+48 silly fetch manifest sugarss@*
+49 silly packumentCache full:https://registry.npmjs.org/sugarss cache-miss
+50 http fetch GET 200 https://registry.npmjs.org/sugarss 248ms (cache miss)
+51 silly packumentCache full:https://registry.npmjs.org/sugarss set size:undefined disposed:false
+52 silly fetch manifest postcss@^8.4.24
+53 silly packumentCache full:https://registry.npmjs.org/postcss cache-miss
+54 http fetch GET 200 https://registry.npmjs.org/postcss 124ms (cache miss)
+55 silly packumentCache full:https://registry.npmjs.org/postcss set size:undefined disposed:false
+56 silly fetch manifest terser@^5.4.0
+57 silly packumentCache full:https://registry.npmjs.org/terser cache-miss
+58 http fetch GET 200 https://registry.npmjs.org/terser 452ms (cache miss)
+59 silly packumentCache full:https://registry.npmjs.org/terser set size:undefined disposed:false
+60 silly fetch manifest vue@^3.3.4
+61 silly packumentCache full:https://registry.npmjs.org/vue cache-miss
+62 http fetch GET 200 https://registry.npmjs.org/vue 116ms (cache miss)
+63 silly packumentCache full:https://registry.npmjs.org/vue set size:undefined disposed:false
+64 silly fetch manifest typescript@*
+65 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+66 http fetch GET 200 https://registry.npmjs.org/typescript 2782ms (cache miss)
+67 silly packumentCache full:https://registry.npmjs.org/typescript set size:undefined disposed:false
+68 silly placeDep ROOT @vitejs/plugin-vue@6.0.1 OK for: student-portal-frontend@1.0.0 want: *
+69 silly fetch manifest @rolldown/pluginutils@1.0.0-beta.29
+70 silly packumentCache full:https://registry.npmjs.org/@rolldown%2fpluginutils cache-miss
+71 http fetch GET 200 https://registry.npmjs.org/@rolldown%2fpluginutils 103ms (cache miss)
+72 silly packumentCache full:https://registry.npmjs.org/@rolldown%2fpluginutils set size:undefined disposed:false
+73 silly placeDep ROOT @rolldown/pluginutils@1.0.0-beta.29 OK for: @vitejs/plugin-vue@6.0.1 want: 1.0.0-beta.29
+74 silly reify moves {}
+75 silly audit bulk request {
+75 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+75 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+75 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+75 silly audit   '@babel/parser': [ '7.28.5' ],
+75 silly audit   '@babel/types': [ '7.28.5' ],
+75 silly audit   '@esbuild/aix-ppc64': [ '0.21.5' ],
+75 silly audit   '@esbuild/android-arm': [ '0.21.5' ],
+75 silly audit   '@esbuild/android-arm64': [ '0.21.5' ],
+75 silly audit   '@esbuild/android-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/darwin-arm64': [ '0.21.5' ],
+75 silly audit   '@esbuild/darwin-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/freebsd-arm64': [ '0.21.5' ],
+75 silly audit   '@esbuild/freebsd-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-arm': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-arm64': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-ia32': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-loong64': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-mips64el': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-ppc64': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-riscv64': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-s390x': [ '0.21.5' ],
+75 silly audit   '@esbuild/linux-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/netbsd-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/openbsd-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/sunos-x64': [ '0.21.5' ],
+75 silly audit   '@esbuild/win32-arm64': [ '0.21.5' ],
+75 silly audit   '@esbuild/win32-ia32': [ '0.21.5' ],
+75 silly audit   '@esbuild/win32-x64': [ '0.21.5' ],
+75 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+75 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+75 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+75 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+75 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+75 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+75 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+75 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+75 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+75 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-android-arm64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-darwin-arm64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-darwin-x64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-freebsd-x64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.52.5' ],
+75 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.52.5' ],
+75 silly audit   '@types/estree': [ '1.0.8' ],
+75 silly audit   '@vue/compiler-core': [ '3.5.22' ],
+75 silly audit   '@vue/compiler-dom': [ '3.5.22' ],
+75 silly audit   '@vue/compiler-sfc': [ '3.5.22' ],
+75 silly audit   '@vue/compiler-ssr': [ '3.5.22' ],
+75 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+75 silly audit   '@vue/reactivity': [ '3.5.22' ],
+75 silly audit   '@vue/runtime-core': [ '3.5.22' ],
+75 silly audit   '@vue/runtime-dom': [ '3.5.22' ],
+75 silly audit   '@vue/server-renderer': [ '3.5.22' ],
+75 silly audit   '@vue/shared': [ '3.5.22' ],
+75 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+75 silly audit   'ansi-styles': [ '6.2.3', '4.3.0' ],
+75 silly audit   'any-promise': [ '1.3.0' ],
+75 silly audit   anymatch: [ '3.1.3' ],
+75 silly audit   arg: [ '5.0.2' ],
+75 silly audit   asynckit: [ '0.4.0' ],
+75 silly audit   autoprefixer: [ '10.4.21' ],
+75 silly audit   axios: [ '1.13.1' ],
+75 silly audit   'balanced-match': [ '1.0.2' ],
+75 silly audit   'baseline-browser-mapping': [ '2.8.21' ],
+75 silly audit   'binary-extensions': [ '2.3.0' ],
+75 silly audit   'brace-expansion': [ '2.0.2' ],
+75 silly audit   braces: [ '3.0.3' ],
+75 silly audit   browserslist: [ '4.27.0' ],
+75 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+75 silly audit   'camelcase-css': [ '2.0.1' ],
+75 silly audit   'caniuse-lite': [ '1.0.30001751' ],
+75 silly audit   chokidar: [ '3.6.0' ],
+75 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+75 silly audit   'color-convert': [ '2.0.1' ],
+75 silly audit   'color-name': [ '1.1.4' ],
+75 silly audit   'combined-stream': [ '1.0.8' ],
+75 silly audit   commander: [ '4.1.1' ],
+75 silly audit   'cross-spawn': [ '7.0.6' ],
+75 silly audit   cssesc: [ '3.0.0' ],
+75 silly audit   csstype: [ '3.1.3' ],
+75 silly audit   'delayed-stream': [ '1.0.0' ],
+75 silly audit   didyoumean: [ '1.2.2' ],
+75 silly audit   dlv: [ '1.1.3' ],
+75 silly audit   'dunder-proto': [ '1.0.1' ],
+75 silly audit   eastasianwidth: [ '0.2.0' ],
+75 silly audit   'electron-to-chromium': [ '1.5.244' ],
+75 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+75 silly audit   entities: [ '4.5.0' ],
+75 silly audit   'es-define-property': [ '1.0.1' ],
+75 silly audit   'es-errors': [ '1.3.0' ],
+75 silly audit   'es-object-atoms': [ '1.1.1' ],
+75 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+75 silly audit   esbuild: [ '0.21.5' ],
+75 silly audit   escalade: [ '3.2.0' ],
+75 silly audit   'estree-walker': [ '2.0.2' ],
+75 silly audit   'fast-glob': [ '3.3.3' ],
+75 silly audit   fastq: [ '1.19.1' ],
+75 silly audit   'fill-range': [ '7.1.1' ],
+75 silly audit   'follow-redirects': [ '1.15.11' ],
+75 silly audit   'foreground-child': [ '3.3.1' ],
+75 silly audit   'form-data': [ '4.0.4' ],
+75 silly audit   'fraction.js': [ '4.3.7' ],
+75 silly audit   fsevents: [ '2.3.3' ],
+75 silly audit   'function-bind': [ '1.1.2' ],
+75 silly audit   'get-intrinsic': [ '1.3.0' ],
+75 silly audit   'get-proto': [ '1.0.1' ],
+75 silly audit   glob: [ '10.4.5' ],
+75 silly audit   gopd: [ '1.2.0' ],
+75 silly audit   'has-symbols': [ '1.1.0' ],
+75 silly audit   'has-tostringtag': [ '1.0.2' ],
+75 silly audit   hasown: [ '2.0.2' ],
+75 silly audit   'is-binary-path': [ '2.1.0' ],
+75 silly audit   'is-core-module': [ '2.16.1' ],
+75 silly audit   'is-extglob': [ '2.1.1' ],
+75 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+75 silly audit   'is-glob': [ '4.0.3' ],
+75 silly audit   'is-number': [ '7.0.0' ],
+75 silly audit   isexe: [ '2.0.0' ],
+75 silly audit   jackspeak: [ '3.4.3' ],
+75 silly audit   jiti: [ '1.21.7' ],
+75 silly audit   lilconfig: [ '3.1.3' ],
+75 silly audit   'lines-and-columns': [ '1.2.4' ],
+75 silly audit   'lru-cache': [ '10.4.3' ],
+75 silly audit   'magic-string': [ '0.30.21' ],
+75 silly audit   'math-intrinsics': [ '1.1.0' ],
+75 silly audit   merge2: [ '1.4.1' ],
+75 silly audit   micromatch: [ '4.0.8' ],
+75 silly audit   'mime-db': [ '1.52.0' ],
+75 silly audit   'mime-types': [ '2.1.35' ],
+75 silly audit   minimatch: [ '9.0.5' ],
+75 silly audit   minipass: [ '7.1.2' ],
+75 silly audit   mz: [ '2.7.0' ],
+75 silly audit   nanoid: [ '3.3.11' ],
+75 silly audit   'node-releases': [ '2.0.27' ],
+75 silly audit   'normalize-path': [ '3.0.0' ],
+75 silly audit   'normalize-range': [ '0.1.2' ],
+75 silly audit   'object-assign': [ '4.1.1' ],
+75 silly audit   'object-hash': [ '3.0.0' ],
+75 silly audit   'package-json-from-dist': [ '1.0.1' ],
+75 silly audit   'path-key': [ '3.1.1' ],
+75 silly audit   'path-parse': [ '1.0.7' ],
+75 silly audit   'path-scurry': [ '1.11.1' ],
+75 silly audit   picocolors: [ '1.1.1' ],
+75 silly audit   picomatch: [ '2.3.1' ],
+75 silly audit   pify: [ '2.3.0' ],
+75 silly audit   pinia: [ '2.3.1' ],
+75 silly audit   pirates: [ '4.0.7' ],
+75 silly audit   postcss: [ '8.5.6' ],
+75 silly audit   'postcss-import': [ '15.1.0' ],
+75 silly audit   'postcss-js': [ '4.1.0' ],
+75 silly audit   'postcss-load-config': [ '6.0.1' ],
+75 silly audit   'postcss-nested': [ '6.2.0' ],
+75 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+75 silly audit   'postcss-value-parser': [ '4.2.0' ],
+75 silly audit   'proxy-from-env': [ '1.1.0' ],
+75 silly audit   'queue-microtask': [ '1.2.3' ],
+75 silly audit   'read-cache': [ '1.0.0' ],
+75 silly audit   readdirp: [ '3.6.0' ],
+75 silly audit   resolve: [ '1.22.11' ],
+75 silly audit   reusify: [ '1.1.0' ],
+75 silly audit   rollup: [ '4.52.5' ],
+75 silly audit   'run-parallel': [ '1.2.0' ],
+75 silly audit   'shebang-command': [ '2.0.0' ],
+75 silly audit   'shebang-regex': [ '3.0.0' ],
+75 silly audit   'signal-exit': [ '4.1.0' ],
+75 silly audit   'source-map-js': [ '1.2.1' ],
+75 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+75 silly audit   'strip-ansi': [ '6.0.1', '7.1.2' ],
+75 silly audit   sucrase: [ '3.35.0' ],
+75 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+75 silly audit   tailwindcss: [ '3.4.18' ],
+75 silly audit   thenify: [ '3.3.1' ],
+75 silly audit   'thenify-all': [ '1.6.0' ],
+75 silly audit   'to-regex-range': [ '5.0.1' ],
+75 silly audit   'ts-interface-checker': [ '0.1.13' ],
+75 silly audit   'update-browserslist-db': [ '1.1.4' ],
+75 silly audit   'util-deprecate': [ '1.0.2' ],
+75 silly audit   vite: [ '5.4.21' ],
+75 silly audit   vue: [ '3.5.22' ],
+75 silly audit   'vue-demi': [ '0.14.10' ],
+75 silly audit   'vue-router': [ '4.6.3' ],
+75 silly audit   which: [ '2.0.2' ],
+75 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+75 silly audit   '@vitejs/plugin-vue': [ '6.0.1' ],
+75 silly audit   '@rolldown/pluginutils': [ '1.0.0-beta.29' ]
+75 silly audit }
+76 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\fsevents
+77 silly reify mark deleted [ 'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\fsevents' ]
+78 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-win32-ia32-msvc
+79 silly reify mark deleted [
+79 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-win32-ia32-msvc'
+79 silly reify ]
+80 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-win32-arm64-msvc
+81 silly reify mark deleted [
+81 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-win32-arm64-msvc'
+81 silly reify ]
+82 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-openharmony-arm64
+83 silly reify mark deleted [
+83 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-openharmony-arm64'
+83 silly reify ]
+84 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-x64-musl
+85 silly reify mark deleted [
+85 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-x64-musl'
+85 silly reify ]
+86 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-x64-gnu
+87 silly reify mark deleted [
+87 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-x64-gnu'
+87 silly reify ]
+88 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-s390x-gnu
+89 silly reify mark deleted [
+89 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-s390x-gnu'
+89 silly reify ]
+90 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-riscv64-musl
+91 silly reify mark deleted [
+91 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-riscv64-musl'
+91 silly reify ]
+92 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-riscv64-gnu
+93 silly reify mark deleted [
+93 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-riscv64-gnu'
+93 silly reify ]
+94 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-ppc64-gnu
+95 silly reify mark deleted [
+95 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-ppc64-gnu'
+95 silly reify ]
+96 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-loong64-gnu
+97 silly reify mark deleted [
+97 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-loong64-gnu'
+97 silly reify ]
+98 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-arm64-musl
+99 silly reify mark deleted [
+99 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-arm64-musl'
+99 silly reify ]
+100 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-arm64-gnu
+101 silly reify mark deleted [
+101 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-arm64-gnu'
+101 silly reify ]
+102 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-arm-musleabihf
+103 silly reify mark deleted [
+103 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-arm-musleabihf'
+103 silly reify ]
+104 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-linux-arm-gnueabihf
+105 silly reify mark deleted [
+105 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-linux-arm-gnueabihf'
+105 silly reify ]
+106 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-freebsd-x64
+107 silly reify mark deleted [
+107 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-freebsd-x64'
+107 silly reify ]
+108 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-freebsd-arm64
+109 silly reify mark deleted [
+109 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-freebsd-arm64'
+109 silly reify ]
+110 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-darwin-x64
+111 silly reify mark deleted [
+111 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-darwin-x64'
+111 silly reify ]
+112 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-darwin-arm64
+113 silly reify mark deleted [
+113 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-darwin-arm64'
+113 silly reify ]
+114 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-android-arm64
+115 silly reify mark deleted [
+115 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-android-arm64'
+115 silly reify ]
+116 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@rollup\rollup-android-arm-eabi
+117 silly reify mark deleted [
+117 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@rollup\\rollup-android-arm-eabi'
+117 silly reify ]
+118 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\win32-ia32
+119 silly reify mark deleted [
+119 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\win32-ia32'
+119 silly reify ]
+120 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\win32-arm64
+121 silly reify mark deleted [
+121 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\win32-arm64'
+121 silly reify ]
+122 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\sunos-x64
+123 silly reify mark deleted [
+123 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\sunos-x64'
+123 silly reify ]
+124 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\openbsd-x64
+125 silly reify mark deleted [
+125 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\openbsd-x64'
+125 silly reify ]
+126 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\netbsd-x64
+127 silly reify mark deleted [
+127 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\netbsd-x64'
+127 silly reify ]
+128 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-x64
+129 silly reify mark deleted [
+129 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-x64'
+129 silly reify ]
+130 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-s390x
+131 silly reify mark deleted [
+131 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-s390x'
+131 silly reify ]
+132 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-riscv64
+133 silly reify mark deleted [
+133 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-riscv64'
+133 silly reify ]
+134 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-ppc64
+135 silly reify mark deleted [
+135 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-ppc64'
+135 silly reify ]
+136 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-mips64el
+137 silly reify mark deleted [
+137 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-mips64el'
+137 silly reify ]
+138 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-loong64
+139 silly reify mark deleted [
+139 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-loong64'
+139 silly reify ]
+140 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-ia32
+141 silly reify mark deleted [
+141 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-ia32'
+141 silly reify ]
+142 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-arm64
+143 silly reify mark deleted [
+143 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-arm64'
+143 silly reify ]
+144 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\linux-arm
+145 silly reify mark deleted [
+145 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\linux-arm'
+145 silly reify ]
+146 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\freebsd-x64
+147 silly reify mark deleted [
+147 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\freebsd-x64'
+147 silly reify ]
+148 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\freebsd-arm64
+149 silly reify mark deleted [
+149 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\freebsd-arm64'
+149 silly reify ]
+150 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\darwin-x64
+151 silly reify mark deleted [
+151 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\darwin-x64'
+151 silly reify ]
+152 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\darwin-arm64
+153 silly reify mark deleted [
+153 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\darwin-arm64'
+153 silly reify ]
+154 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\android-x64
+155 silly reify mark deleted [
+155 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\android-x64'
+155 silly reify ]
+156 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\android-arm64
+157 silly reify mark deleted [
+157 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\android-arm64'
+157 silly reify ]
+158 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\android-arm
+159 silly reify mark deleted [
+159 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\android-arm'
+159 silly reify ]
+160 verbose reify failed optional dependency C:\Users\ACER\student-portal\frontend\node_modules\@esbuild\aix-ppc64
+161 silly reify mark deleted [
+161 silly reify   'C:\\Users\\ACER\\student-portal\\frontend\\node_modules\\@esbuild\\aix-ppc64'
+161 silly reify ]
+162 http cache @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.29.tgz 0ms (cache hit)
+163 http cache @vitejs/plugin-vue@https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.1.tgz 0ms (cache hit)
+164 silly tarball no local data for @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.29.tgz. Extracting by manifest.
+165 silly tarball no local data for @vitejs/plugin-vue@https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.1.tgz. Extracting by manifest.
+166 http fetch GET 200 https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.29.tgz 186ms (cache miss)
+167 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 329ms
+168 silly audit report {
+168 silly audit report   esbuild: [
+168 silly audit report     {
+168 silly audit report       id: 1102341,
+168 silly audit report       url: 'https://github.com/advisories/GHSA-67mh-4wv8-2f99',
+168 silly audit report       title: 'esbuild enables any website to send any requests to the development server and read the response',
+168 silly audit report       severity: 'moderate',
+168 silly audit report       vulnerable_versions: '<=0.24.2',
+168 silly audit report       cwe: [Array],
+168 silly audit report       cvss: [Object]
+168 silly audit report     }
+168 silly audit report   ]
+168 silly audit report }
+169 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+170 http fetch GET 200 https://registry.npmjs.org/esbuild 103ms (cache miss)
+171 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:undefined disposed:false
+172 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+173 http fetch GET 200 https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-6.0.1.tgz 777ms (cache miss)
+174 http fetch GET 200 https://registry.npmjs.org/vite 1054ms (cache miss)
+175 silly packumentCache corgi:https://registry.npmjs.org/vite set size:undefined disposed:false
+176 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue cache-miss
+177 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-vue 531ms (cache miss)
+178 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-vue set size:undefined disposed:false
+179 silly ADD node_modules/@rolldown/pluginutils
+180 silly ADD node_modules/@vitejs/plugin-vue
+181 silly ADD
+182 silly ADD
+183 silly ADD
+184 silly ADD
+185 silly ADD
+186 silly ADD
+187 silly ADD
+188 silly ADD
+189 silly ADD
+190 silly ADD
+191 silly ADD
+192 silly ADD
+193 silly ADD
+194 silly ADD
+195 silly ADD
+196 silly ADD
+197 silly ADD
+198 silly ADD
+199 silly ADD
+200 silly ADD
+201 silly ADD
+202 silly ADD
+203 silly ADD
+204 silly ADD
+205 silly ADD
+206 silly ADD
+207 silly ADD
+208 silly ADD
+209 silly ADD
+210 silly ADD
+211 silly ADD
+212 silly ADD
+213 silly ADD
+214 silly ADD
+215 silly ADD
+216 silly ADD
+217 silly ADD
+218 silly ADD
+219 silly ADD
+220 silly ADD
+221 silly ADD
+222 silly ADD
+223 silly ADD
+224 verbose cwd C:\Users\ACER\student-portal\frontend
+225 verbose os Windows_NT 10.0.19045
+226 verbose node v22.20.0
+227 verbose npm  v10.9.3
+228 notice
+228 notice New [31mmajor[39m version of npm available! [31m10.9.3[39m -> [34m11.6.2[39m
+228 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.6.2[39m
+228 notice To update run: [4mnpm install -g npm@11.6.2[24m
+228 notice  { force: true, [Symbol(proc-log.meta)]: true }
+229 verbose exit 0
+230 info ok

@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Open House",
+      "description": "School open house for prospective students and parents",
+      "date": "2025-11-15",
+      "time": "10:00 AM - 2:00 PM",
+      "location": "School Auditorium",
+      "type": "academic"
+    },
+    {
+      "id": "2",
+      "title": "Science Fair",
+      "description": "Annual science fair showcasing student projects",
+      "date": "2025-11-20",
+      "time": "9:00 AM - 4:00 PM",
+      "location": "School Gymnasium",
+      "type": "academic"
+    },
+    {
+      "id": "3",
+      "title": "Sports Day",
+      "description": "Annual sports competition and athletic events",
+      "date": "2025-11-25",
+      "time": "8:00 AM - 5:00 PM",
+      "location": "School Sports Complex",
+      "type": "extracurricular"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "code": "CSP109",
+      "name": "CS-Software Engineering",
+      "instructor": "Patrick Jason Torres",
+      "schedule": {
+        "days": ["Saturday"],
+        "time": "10:00-12:30"
+      },
+      "assignments": [
+        {
+          "id": 1,
+          "title": "Computer Science Assignment",
+          "dueDate": "2025-11-05",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "code": "CSE101",
+      "name": "CS-Elective",
+      "instructor": "Patrick Jason Torres",
+      "schedule": {
+        "days": ["Wednesday", "Thursday"],
+        "time": "3:00-5:30"
+      },
+      "assignments": [
+        {
+          "id": 2,
+          "title": "Computer Science Case Study",
+          "dueDate": "2025-11-07",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

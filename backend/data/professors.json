@@ -1,0 +1,13 @@
+{
+  "professors": [
+    {
+      "id": "PROF001",
+      "username": "prof",
+      "password": "prof123",
+      "name": "Patrick Jason Torres",
+      "department": "Computer Science",
+      "courses": ["CS101", "CS201"],
+      "email": "patrick@gmail.com"
+    }
+  ]
+}

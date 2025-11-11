@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": "12345678",
+      "password": "Calma",
+      "firstName": "Adrian",
+      "lastName": "Calma",
+      "grades": [],
+      "subjects": []
+    },
+    {
+      "id": "53452023",
+      "password": "Dungo",
+      "firstName": "Charles",
+      "lastName": "Dungo",
+      "grades": [],
+      "subjects": []
+    },
+    {
+      "id": "01234567",
+      "password": "tolentino",
+      "firstName": "robin",
+      "lastName": "tolentino",
+      "grades": [],
+      "subjects": []
+    },
+    {
+      "id": "56482023",
+      "password": "Simon",
+      "firstName": "Russel James",
+      "lastName": "Simon",
+      "grades": [],
+      "subjects": []
+    },
+    {
+      "id": "56612023",
+      "password": "Hipolito",
+      "firstName": "Princess",
+      "lastName": "Hipolito",
+      "grades": [],
+      "subjects": []
+    }
+  ]
+}

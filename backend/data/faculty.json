@@ -1,0 +1,37 @@
+{
+  "faculty": [
+    {
+      "id": "1",
+      "name": "Dr. John Smith",
+      "position": "Head of Science Department",
+      "department": "Science",
+      "email": "john.smith@school.edu",
+      "education": "Ph.D. in Physics",
+      "image": "https://example.com/faculty/john-smith.jpg",
+      "specialization": "Quantum Physics",
+      "joinDate": "2020-01-15"
+    },
+    {
+      "id": "2",
+      "name": "Prof. Sarah Johnson",
+      "position": "Senior Mathematics Teacher",
+      "department": "Mathematics",
+      "email": "sarah.johnson@school.edu",
+      "education": "M.Sc. in Mathematics",
+      "image": "https://example.com/faculty/sarah-johnson.jpg",
+      "specialization": "Applied Mathematics",
+      "joinDate": "2019-08-01"
+    },
+    {
+      "id": "3",
+      "name": "Ms. Emily Brown",
+      "position": "English Literature Teacher",
+      "department": "English",
+      "email": "emily.brown@school.edu",
+      "education": "M.A. in English Literature",
+      "image": "https://example.com/faculty/emily-brown.jpg",
+      "specialization": "Modern Literature",
+      "joinDate": "2021-03-10"
+    }
+  ]
+}

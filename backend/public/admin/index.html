@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">👑 Admin Portal</h1>
+    </div>
+  </nav>
+
+  <div class="container mx-auto p-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- User Management -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">👥 User Management</h2>
+        <div class="space-y-2">
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='users/students'">Manage Students</button>
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='users/professors'">Manage Professors</button>
+        </div>
+      </div>
+
+      <!-- Course Management -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">📚 Courses</h2>
+        <div class="space-y-2">
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='courses'">Manage Courses</button>
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='courses/assign'">Assign Professors</button>
+        </div>
+      </div>
+
+      <!-- Academic Records -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">📊 Records</h2>
+        <div class="space-y-2">
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='records/grades'">View Grades</button>
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='records/enrollment'">Manage Enrollment</button>
+        </div>
+      </div>
+
+      <!-- Announcements -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-bold mb-4">📢 Announcements</h2>
+        <div class="space-y-2">
+          <button class="w-full p-2 bg-blue-500 text-white rounded" onclick="location.href='announcements'">Post Announcements</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

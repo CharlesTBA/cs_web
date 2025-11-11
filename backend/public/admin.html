@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin - Holy Cross College</title>
+    <style>
+      body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;margin:24px;background:#f7fafc}
+      .card{background:white;padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);margin-bottom:16px}
+      input,button,textarea{font:inherit}
+      .btn{background:#2563eb;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+      .btn.danger{background:#dc2626}
+      label{display:block;margin-bottom:6px}
+    </style>
+  </head>
+  <body>
+    <h1>Holy Cross College - Admin</h1>
+
+    <section class="card">
+      <h2>Register student</h2>
+      <form id="registerForm">
+        <label>Student ID (8 digits)<input id="regId" /></label>
+        <label>First name<input id="regFirst" /></label>
+        <label>Last name<input id="regLast" /></label>
+        <button class="btn" type="submit">Register</button>
+      </form>
+      <div id="regResult"></div>
+    </section>
+
+    <section class="card">
+      <h2>Add subject</h2>
+      <form id="subjectForm">
+        <label>Code<input id="subCode" /></label>
+        <label>Name<input id="subName" /></label>
+        <button class="btn" type="submit">Add Subject</button>
+      </form>
+      <div id="subResult"></div>
+      <div id="subjectsList"></div>
+    </section>
+
+    <section class="card">
+      <h2>Add grade</h2>
+      <form id="gradeForm">
+        <label>Student name<input id="gradeStudent" /></label>
+        <label>Subject ID (number)<input id="gradeSubjectId" /></label>
+        <label>Subject name<input id="gradeSubjectName" /></label>
+        <label>Grade<input id="gradeValue" type="number" /></label>
+        <button class="btn" type="submit">Add Grade</button>
+      </form>
+      <div id="gradeResult"></div>
+      <div id="gradesList"></div>
+    </section>
+
+    <script>
+      // Small helper for POST/PUT
+      async function postJson(url, body){
+        const r = await fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+        try { return await r.json(); } catch(e){ return { error: 'Invalid response' } }
+      }
+
+      // Register form
+      document.getElementById('registerForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const studentId = document.getElementById('regId').value.trim();
+        const firstName = document.getElementById('regFirst').value.trim();
+        const lastName = document.getElementById('regLast').value.trim();
+        const resultEl = document.getElementById('regResult');
+        resultEl.innerText = '';
+        if(!/^\d{8}$/.test(studentId)) { resultEl.innerText = 'Student ID must be 8 digits'; return }
+        if(!firstName || !lastName) { resultEl.innerText = 'First and last name required'; return }
+        const res = await postJson('/api/auth/register', { studentId, firstName, lastName });
+        if(res && res.message) {
+          resultEl.innerText = res.message;
+          document.getElementById('regId').value=''; document.getElementById('regFirst').value=''; document.getElementById('regLast').value='';
+          loadStudents();
+        } else {
+          resultEl.innerText = res.error || JSON.stringify(res);
+        }
+      });
+
+      // Subject form
+      document.getElementById('subjectForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const code = document.getElementById('subCode').value.trim();
+        const name = document.getElementById('subName').value.trim();
+        const resultEl = document.getElementById('subResult'); resultEl.innerText = '';
+        if(!code || !name) { resultEl.innerText = 'Code and name required'; return }
+        const res = await postJson('/api/subjects', { code, name });
+        if(res && res.id) { resultEl.innerText = 'Subject added'; document.getElementById('subCode').value=''; document.getElementById('subName').value=''; loadSubjects(); }
+        else resultEl.innerText = res.error || JSON.stringify(res);
+      });
+
+      // Grade form
+      document.getElementById('gradeForm').addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const studentName = document.getElementById('gradeStudent').value.trim();
+        const subjectId = parseInt(document.getElementById('gradeSubjectId').value);
+        const subjectName = document.getElementById('gradeSubjectName').value.trim();
+        const grade = parseFloat(document.getElementById('gradeValue').value);
+        const resultEl = document.getElementById('gradeResult'); resultEl.innerText = '';
+        if(!studentName || !subjectName || isNaN(subjectId) || isNaN(grade)) { resultEl.innerText = 'All fields required'; return }
+        const res = await postJson('/api/grades', { studentName, subjectId, subjectName, grade, date: new Date().toISOString().slice(0,10) });
+        if(res && res.id) { resultEl.innerText = 'Grade added'; document.getElementById('gradeStudent').value=''; document.getElementById('gradeSubjectId').value=''; document.getElementById('gradeSubjectName').value=''; document.getElementById('gradeValue').value=''; loadGrades(); }
+        else resultEl.innerText = res.error || JSON.stringify(res);
+      });
+
+      // Students list (with edit)
+      async function loadStudents(){
+        const res = await fetch('/api/auth');
+        const list = await res.json().catch(()=>null);
+        const el = document.getElementById('studentsList');
+        if(!Array.isArray(list)) { el.innerHTML = '<h3>Students</h3><div>Error loading students</div>'; return }
+        if(list.length===0) { el.innerHTML = '<h3>Students</h3><div>No students found</div>'; return }
+        el.innerHTML = '<h3>Students</h3>' +
+          '<input id="studentSearch" placeholder="Search name or id" style="margin-bottom:8px;padding:6px;width:100%" />' +
+          '<div id="studentsTable" style="max-height:300px;overflow:auto;margin-top:8px"></div>';
+        const tableEl = document.getElementById('studentsTable');
+        function render(filter=''){
+          const filtered = list.filter(s => (s.firstName + ' ' + s.lastName + ' ' + s.id).toLowerCase().includes(filter.toLowerCase()));
+          tableEl.innerHTML = filtered.map(s=>
+            `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px;border-bottom:1px solid #eee">
+              <div><strong>${s.firstName} ${s.lastName}</strong><div style="font-size:12px;color:#666">ID: ${s.id}</div></div>
+              <div>
+                <button onclick="editStudent('${s.id}')" class=\"btn\">Edit</button>
+                <button onclick="confirmDeleteStudent('${s.id}')" class=\"btn danger\">Delete</button>
+              </div>
+            </div>
+            <div id="editStudentForm_${s.id}" style="display:none;padding:8px 0 8px 0">
+              <form onsubmit="return saveStudentEdit('${s.id}')">
+                <input id="editFirst_${s.id}" value="${s.firstName}" placeholder="First name" style="margin-right:4px" />
+                <input id="editLast_${s.id}" value="${s.lastName}" placeholder="Last name" style="margin-right:4px" />
+                <input id="editPass_${s.id}" value="" placeholder="New password (optional)" style="margin-right:4px" />
+                <button class="btn" type="submit">Save</button>
+                <button class="btn danger" type="button" onclick="cancelStudentEdit('${s.id}')">Cancel</button>
+              </form>
+              <div id="editStudentMsg_${s.id}" style="color:#dc2626;font-size:12px"></div>
+            </div>`
+          ).join('');
+        }
+        document.getElementById('studentSearch').addEventListener('input',(e)=>render(e.target.value));
+        render('');
+      }
+      window.editStudent = function(id){
+        document.getElementById('editStudentForm_'+id).style.display = 'block';
+      }
+      window.cancelStudentEdit = function(id){
+        document.getElementById('editStudentForm_'+id).style.display = 'none';
+      }
+      window.saveStudentEdit = async function(id){
+        const firstName = document.getElementById('editFirst_'+id).value.trim();
+        const lastName = document.getElementById('editLast_'+id).value.trim();
+        const password = document.getElementById('editPass_'+id).value.trim();
+        if(!firstName || !lastName) { document.getElementById('editStudentMsg_'+id).innerText = 'First and last name required'; return false; }
+        const res = await fetch('/api/auth/'+encodeURIComponent(id), {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ firstName, lastName, password: password || undefined })
+        });
+        const data = await res.json();
+        if(res.ok) {
+          document.getElementById('editStudentForm_'+id).style.display = 'none';
+          loadStudents();
+        } else {
+          document.getElementById('editStudentMsg_'+id).innerText = data.error || 'Error updating';
+        }
+        return false;
+      }
+
+      // Subjects and grades (improved render)
+      async function loadSubjects(){
+        const res = await fetch('/api/subjects');
+        const list = await res.json().catch(()=>null);
+        const el = document.getElementById('subjectsList');
+        if(!Array.isArray(list)) { el.innerText = 'Error loading subjects'; return }
+        el.innerHTML = '<h3>Subjects</h3>' + list.map(s=>`<div style="display:flex;justify-content:space-between;padding:6px;border-bottom:1px solid #eee">${s.id} - ${s.code} - ${s.name} <div><button onclick="delSubject(${s.id})" class=\"btn danger\">Delete</button></div></div>`).join('');
+      }
+
+      async function loadGrades(){
+        const res = await fetch('/api/grades');
+        const list = await res.json().catch(()=>null);
+        const el = document.getElementById('gradesList');
+        if(!Array.isArray(list)) { el.innerText = 'Error loading grades'; return }
+        el.innerHTML = '<h3>Grades</h3>' + list.map(g=>`<div style="display:flex;justify-content:space-between;padding:6px;border-bottom:1px solid #eee">${g.id} - ${g.studentName} - ${g.subjectName} - ${g.grade} <div><button onclick="delGrade(${g.id})" class=\"btn danger\">Delete</button></div></div>`).join('');
+      }
+
+      async function delSubject(id){
+        if(!confirm('Delete subject ' + id + '?')) return;
+        await fetch('/api/subjects/' + id, { method: 'DELETE' });
+        loadSubjects();
+      }
+      async function delGrade(id){
+        if(!confirm('Delete grade ' + id + '?')) return;
+        await fetch('/api/grades/' + id, { method: 'DELETE' });
+        loadGrades();
+      }
+
+      // initial
+      loadStudents();
+      loadSubjects();
+      loadGrades();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+logs/
+.DS_Store
+.env
+.env.local
+dist/
+frontend/dist/
+backend/node_modules/
+
+# Vite
+dist/
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
