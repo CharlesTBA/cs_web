@@ -13,10 +13,14 @@ const facultyRouter = require('./routes/faculty');
 
 const app = express();
 
-// Configure CORS for development
-// Allow all localhost ports for development
+// Configure CORS for development and production
+// Allow localhost for development, and GitHub Pages for production
 app.use(cors({
-  origin: [/^http:\/\/localhost:\d+$/, /^http:\/\/127\.0\.0\.1:\d+$/],
+  origin: [
+    /^http:\/\/localhost:\d+$/,
+    /^http:\/\/127\.0\.0\.1:\d+$/,
+    'https://charlestba.github.io'
+  ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
@@ -72,7 +76,8 @@ app.get(/^\/professor(\/.*)?$/, (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'professor', 'index.html'));
 });
 
-app.listen(3000, () => console.log('✅ Server running on http://localhost:3000'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
 // Code to register a new student (for testing purposes)
 // curl -X POST http://localhost:3000/api/auth/register \
