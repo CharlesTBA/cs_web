@@ -7,7 +7,7 @@ export const getApiBaseUrl = () => {
       window.location.hostname === 'github.io') {
     // Use CORS-enabled backend API
     // For production, update this to your deployed backend URL
-    return 'https://holy-cross-api.herokuapp.com' // Replace with your actual backend URL
+  return 'https://cs-web-zeta.vercel.app'
   }
   
   // During local development
