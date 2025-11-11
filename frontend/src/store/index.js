@@ -1,10 +1,9 @@
 import { defineStore } from 'pinia'
 import axios from 'axios'
+import { API_BASE_URL } from '../config/api'
 
-// Ensure API calls from the frontend during development target the backend server
-// (Vite runs on a different port). Using axios.defaults.baseURL keeps existing
-// relative paths (e.g. '/api/grades') working without changing all callers.
-axios.defaults.baseURL = 'http://localhost:3000'
+// Use the API base URL from config
+axios.defaults.baseURL = API_BASE_URL
 
 export const useMainStore = defineStore('main', {
   state: () => ({
